@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form {
+            border: 2px solid black;
+            width: max-content;
+            margin: 10px;
+            padding: 100px;
+        }
+        input{
+            width: 190px;
+        }
+        button{
+            margin-top: 15%;
+        }
+        input{
+            margin-top: -30px;
+        }
+    </style>
+</head>
+<body>
+    <p><b>Create Div</b></p>
+    <div id="form">
+        <p>Enter Height</p><br>
+        <input type="number"
+               placeholder="Enter Height"
+               id="height"
+               ><br>
+        <p>Enter width</p><br>
+        <input type="number"
+               placeholder="Enter width"
+               id="width"
+               ><br>
+
+        <P>ENTER COLOR</P><br>
+        <input type="color"
+               placeholder="Enter Height"
+               id="color"
+               ><br>
+               <P>ENTER Content</P><br>
+        <input type="text"
+               id="content"
+               ><br>
+
+        <button id="btnCreate" onclick="createDiv()">Create Div</button>
+    </div>
+    <div id="newDiv">
+    </div>
+    <script>
+        function createDiv(){
+            var divH = document.getElementById('height').value;
+            var divW = document.getElementById('width').value;
+            var divC = document.getElementById('color').value;
+            var divContent = document.getElementById('content').value;
+            var doc = document.getElementById('newDiv').style
+            doc.height= divH+'px';
+            doc.width= divW+'px';
+            doc.backgroundColor = divC;
+            document.getElementById('newDiv').innerHTML = divContent;
+        }
+    </script>
+</body>
+</html>
